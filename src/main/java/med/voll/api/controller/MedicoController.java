@@ -43,7 +43,8 @@ public class MedicoController {
     ) 
     Pageable paginacao
   ) {
-    return repository.findAll(paginacao).map(DadosListagemMedico::new);
+    short ativo = 1;
+    return repository.findAllByAtivo(ativo, paginacao).map(DadosListagemMedico::new);
   }
 
   @PutMapping
@@ -56,7 +57,12 @@ public class MedicoController {
   @DeleteMapping("/{id}")
   @Transactional
   public void excluir(@PathVariable Long id) {
-    repository.deleteById(id);
+    // literal delete
+    // repository.deleteById(id);
+
+    // logical delete
+    var medico = repository.getReferenceById(id);
+    medico.excluir();
   }
 
 }
