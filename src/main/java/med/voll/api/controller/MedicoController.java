@@ -7,12 +7,14 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import jakarta.validation.Valid;
 import med.voll.api.entities.Medico;
+import med.voll.api.records.DadosAtualizacaoMedico;
 import med.voll.api.records.DadosCadastroMedico;
 import med.voll.api.records.DadosListagemMedico;
 import med.voll.api.repositories.MedicoRepository;
@@ -40,6 +42,13 @@ public class MedicoController {
     Pageable paginacao
   ) {
     return repository.findAll(paginacao).map(DadosListagemMedico::new);
+  }
+
+  @PutMapping
+  @Transactional
+  public void editar(@RequestBody @Valid DadosAtualizacaoMedico dados) {
+    var medico = repository.getReferenceById(dados.id());
+    medico.atualizarInfos(dados);
   }
 
 }
