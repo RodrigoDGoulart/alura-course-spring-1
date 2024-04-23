@@ -1,0 +1,117 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Alura Spring Course 1",
+    "collectionId": "70a0b687-aa27-429c-ad17-4791c40e1e0a",
+    "dateExported": "2024-04-23T02:41:04.656Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "e21e9b4c-1b25-4b7e-ac4e-189b80402519",
+            "colId": "70a0b687-aa27-429c-ad17-4791c40e1e0a",
+            "containerId": "",
+            "name": "delete medicos",
+            "url": "http://localhost:8080/medicos/4",
+            "method": "DELETE",
+            "sortNum": 10000,
+            "created": "2024-04-23T02:39:30.777Z",
+            "modified": "2024-04-23T02:39:30.777Z",
+            "headers": []
+        },
+        {
+            "_id": "1cc0a27b-ea3b-4580-a40c-1b10d4aa9bb3",
+            "colId": "70a0b687-aa27-429c-ad17-4791c40e1e0a",
+            "containerId": "",
+            "name": "update medico",
+            "url": "http://localhost:8080/medicos",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-04-23T02:40:08.908Z",
+            "modified": "2024-04-23T02:40:08.908Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": 6,\n  \"nome\": \"rodrigo ferreira terceiro\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "7f90ecc0-113c-423a-828b-1db2ee247747",
+            "colId": "70a0b687-aa27-429c-ad17-4791c40e1e0a",
+            "containerId": "",
+            "name": "list pacientes",
+            "url": "http://localhost:8080/pacientes",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-04-23T02:40:22.373Z",
+            "modified": "2024-04-23T02:40:22.373Z",
+            "headers": []
+        },
+        {
+            "_id": "e4902adf-5667-4d0f-a41c-2fe2f633172d",
+            "colId": "70a0b687-aa27-429c-ad17-4791c40e1e0a",
+            "containerId": "",
+            "name": "list medicos",
+            "url": "http://localhost:8080/medicos?sort=crm,desc",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-04-23T02:40:33.233Z",
+            "modified": "2024-04-23T02:40:33.233Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "size",
+                    "value": "1",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "page",
+                    "value": "2",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "sort",
+                    "value": "crm,desc",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "6bc1a2a0-289d-4c0b-b8a1-1ceda6cdcf0d",
+            "colId": "70a0b687-aa27-429c-ad17-4791c40e1e0a",
+            "containerId": "",
+            "name": "post paciente",
+            "url": "http://localhost:8080/pacientes",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-04-23T02:40:47.375Z",
+            "modified": "2024-04-23T02:40:47.375Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"rodrigo ferreira third\",\n  \"email\": \"rodrigo.ferreira.tres@voll.med\",\n  \"telefone\": \"123123123\",\n  \"cpf\": \"12312312323\",\n  \"endereco\": {\n    \"logradouro\": \"rua 3\",\n    \"bairro\": \"bairro 2\",\n    \"cep\": \"12345679\",\n    \"cidade\": \"Brasilia\",\n    \"uf\": \"DF\",\n    \"numero\": \"1\"\n  }\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "99098678-f6ca-40fc-9953-ea1df1c34984",
+            "colId": "70a0b687-aa27-429c-ad17-4791c40e1e0a",
+            "containerId": "",
+            "name": "post medico",
+            "url": "http://localhost:8080/medicos",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-04-23T02:40:58.053Z",
+            "modified": "2024-04-23T02:40:58.053Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"rodrigo ferreira third\",\n  \"email\": \"rodrigo.ferreira.tres@voll.med\",\n  \"crm\": \"444223\",\n  \"telefone\": \"123123123\",\n  \"especialidade\": \"ORTOPEDIA\",\n  \"endereco\": {\n    \"logradouro\": \"rua 3\",\n    \"bairro\": \"bairro 2\",\n    \"cep\": \"12345679\",\n    \"cidade\": \"Brasilia\",\n    \"uf\": \"DF\",\n    \"numero\": \"1\"\n  }\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "NP9aA4qeSRuivIMo3WNptSSpzGkpxgGt9h-ZPMYdmG5j-ZLQEXmp4fHlbctRz05JZJfb-ZjdldXrOBSnOx-SVg"
+}
